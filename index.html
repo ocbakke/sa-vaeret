@@ -1,0 +1,280 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green24\blue24;\red140\green211\blue254;
+\red202\green202\blue202;\red109\green109\blue109;\red194\green126\blue101;\red109\green115\blue120;\red183\green111\blue247;
+\red212\green212\blue212;\red167\green197\blue152;\red113\green192\blue131;\red246\green124\blue48;\red54\green192\blue160;
+\red238\green46\blue56;}
+{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c12157\c12549;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c50196\c50196\c50196;\cssrgb\c80784\c56863\c47059;\cssrgb\c50196\c52549\c54510;\cssrgb\c77255\c54118\c97647;
+\cssrgb\c86275\c86275\c86275;\cssrgb\c70980\c80784\c65882;\cssrgb\c50588\c78824\c58431;\cssrgb\c98039\c56471\c24314;\cssrgb\c23922\c78824\c69020;
+\cssrgb\c95686\c27843\c27843;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+<!DOCTYPE\cf4  html\cf2 >\cf5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 <\cf2 html\cf5  \cf4 lang\cf6 =\cf7 "no"\cf6 >\cf5 \cb1 \
+\cf6 \cb3 <\cf2 head\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 meta\cf5  \cf4 charset\cf6 =\cf7 "UTF-8"\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 meta\cf5  \cf4 name\cf6 =\cf7 "viewport"\cf5  \cf4 content\cf6 =\cf7 "width=device-width, initial-scale=1.0"\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 title\cf6 >\cf5 Sarpsborg V\'e6rrigg\cf6 </\cf2 title\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- Tailwind CSS for styling (raskt og responsivt) -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 script\cf5  \cf4 src\cf6 =\cf7 "https://cdn.tailwindcss.com"\cf6 ></\cf2 script\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- Lucide ikoner for stilrene v\'e6rsymboler -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 script\cf5  \cf4 src\cf6 =\cf7 "https://unpkg.com/lucide@latest"\cf6 ></\cf2 script\cf6 >\cf5 \cb1 \
+\cb3     \cf6 <\cf2 style\cf6 >\cf5 \cb1 \
+\cb3         \cf8 /* Litt ekstra styling for animasjoner */\cf5 \cb1 \
+\cb3         \cf9 @keyframes\cf5  \cf7 spin\cf5  \cf10 \{\cf5  \cf11 100%\cf5  \cf10 \{\cf5  \cf4 transform:\cf5  \cf7 rotate(\cf11 360deg\cf7 )\cf10 ;\cf5  \cf10 \}\cf5  \cf10 \}\cf5 \cb1 \
+\cb3         \cf2 .animate-spin-slow\cf5  \cf10 \{\cf5  \cf4 animation:\cf5  \cf7 spin\cf5  \cf11 3s\cf5  \cf7 linear\cf5  \cf7 infinite\cf10 ;\cf5  \cf10 \}\cf5 \cb1 \
+\cb3         \cb1 \
+\cb3         \cf8 /* Gj\'f8r at utbrettingsmenyen glir pent */\cf5 \cb1 \
+\cb3         \cf2 .forecast-dropdown\cf5  \cf10 \{\cf5 \cb1 \
+\cb3             \cf4 display:\cf5  \cf7 grid\cf10 ;\cf5 \cb1 \
+\cb3             \cf4 grid-template-rows:\cf5  \cf11 0fr\cf10 ;\cf5 \cb1 \
+\cb3             \cf4 transition:\cf5  \cf7 grid-template-rows\cf5  \cf11 0.3s\cf5  \cf7 ease-out\cf10 ;\cf5 \cb1 \
+\cb3         \cf10 \}\cf5 \cb1 \
+\cb3         \cf2 .forecast-dropdown.open\cf5  \cf10 \{\cf5 \cb1 \
+\cb3             \cf4 grid-template-rows:\cf5  \cf11 1fr\cf10 ;\cf5 \cb1 \
+\cb3         \cf10 \}\cf5 \cb1 \
+\cb3         \cf2 .forecast-inner\cf5  \cf10 \{\cf5 \cb1 \
+\cb3             \cf4 overflow:\cf5  \cf7 hidden\cf10 ;\cf5 \cb1 \
+\cb3         \cf10 \}\cf5 \cb1 \
+\cb3     \cf6 </\cf2 style\cf6 >\cf5 \cb1 \
+\cf6 \cb3 </\cf2 head\cf6 >\cf5 \cb1 \
+\cf6 \cb3 <\cf2 body\cf5  \cf4 class\cf6 =\cf7 "bg-gray-100 flex items-center justify-center min-h-screen p-4"\cf6 >\cf5 \cb1 \
+\
+\cb3     \cf8 <!-- Selve V\'e6rriggen start -->\cf5 \cb1 \
+\cb3     \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "bg-white rounded-2xl shadow-lg border border-gray-200 w-full max-w-md overflow-hidden font-sans"\cf6 >\cf5 \cb1 \
+\cb3         \cb1 \
+\cb3         \cf8 <!-- Topptekst med SA-logo -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "bg-white border-b-4 border-[#e3000f] px-6 py-4"\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "flex justify-between items-center"\cf6 >\cf5 \cb1 \
+\cb3                 \cf8 <!-- Fallback-logo i SVG -->\cf5 \cb1 \
+\cb3                 \cf6 <\cf2 img\cf5  \cf4 src\cf6 =\cf7 "sa.svg"\cf5  \cf4 alt\cf6 =\cf7 "Sarpsborg Arbeiderblad"\cf5  \cf4 class\cf6 =\cf7 "h-9"\cf5  \cf4 onerror\cf6 =\cf7 "this.outerHTML='<svg viewBox=\\'0 0 80 40\\' class=\\'h-9\\' xmlns=\\'http://www.w3.org/2000/svg\\'><text x=\\'0\\' y=\\'32\\' font-family=\\'Georgia, serif\\' font-weight=\\'900\\' font-size=\\'38\\' fill=\\'#e3000f\\'>S</text><text x=\\'24\\' y=\\'32\\' font-family=\\'Georgia, serif\\' font-weight=\\'900\\' font-size=\\'44\\' fill=\\'#e3000f\\'>a</text><circle cx=\\'62\\' cy=\\'30\\' r=\\'5\\' fill=\\'#1e293b\\'/></svg>'"\cf6 >\cf5 \cb1 \
+\cb3                 \cb1 \
+\cb3                 \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "flex items-center text-[#e3000f]"\cf6 >\cf5 \cb1 \
+\cb3                     \cf6 <\cf2 i\cf5  \cf4 data-lucide\cf6 =\cf7 "cloud-sun"\cf5  \cf4 class\cf6 =\cf7 "w-5 h-5 mr-1.5"\cf6 ></\cf2 i\cf6 >\cf5 \cb1 \
+\cb3                     \cf6 <\cf2 h2\cf5  \cf4 class\cf6 =\cf7 "text-sm font-bold tracking-wider text-gray-800 uppercase"\cf6 >\cf5 V\'e6ret akkurat n\'e5\cf6 </\cf2 h2\cf6 >\cf5 \cb1 \
+\cb3                 \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\cb3             \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 p\cf5  \cf4 class\cf6 =\cf7 "text-gray-500 text-xs mt-1.5 font-medium"\cf5  \cf4 id\cf6 =\cf7 "time-display"\cf6 >\cf5 Henter lokasjoner...\cf6 </\cf2 p\cf6 >\cf5 \cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\
+\cb3         \cf8 <!-- Hovedinnhold (Laster) -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 id\cf6 =\cf7 "loading-state"\cf5  \cf4 class\cf6 =\cf7 "p-8 text-center text-gray-500"\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 i\cf5  \cf4 data-lucide\cf6 =\cf7 "loader-2"\cf5  \cf4 class\cf6 =\cf7 "w-8 h-8 mx-auto animate-spin-slow mb-3 text-[#e3000f]"\cf6 ></\cf2 i\cf6 >\cf5 \cb1 \
+\cb3             \cf6 <\cf2 p\cf6 >\cf5 Henter ferske v\'e6rdata for ulike omr\'e5der...\cf6 </\cf2 p\cf6 >\cf5 \cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\
+\cb3         \cf8 <!-- Liste med omr\'e5der (Data) - Skjult som standard -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 id\cf6 =\cf7 "weather-list"\cf5  \cf4 class\cf6 =\cf7 "hidden flex flex-col divide-y divide-gray-100"\cf6 >\cf5 \cb1 \
+\cb3             \cf8 <!-- Innholdet genereres dynamisk av JavaScript -->\cf5 \cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\
+\cb3         \cf8 <!-- Kildehenvisning (P\'e5krevd av Yr/MET) -->\cf5 \cb1 \
+\cb3         \cf6 <\cf2 div\cf5  \cf4 class\cf6 =\cf7 "px-6 py-3 bg-gray-50 text-xs text-gray-400 text-center border-t border-gray-200"\cf6 >\cf5 \cb1 \
+\cb3             V\'e6rvarsel fra \cf6 <\cf2 a\cf5  \cf4 href\cf6 =\cf7 "https://www.yr.no/nb/v\'e6rvarsel/daglig-tabell/1-105152/Norge/\'d8stfold/Sarpsborg/Sarpsborg"\cf5  \cf4 target\cf6 =\cf7 "_blank"\cf5  \cf4 class\cf6 =\cf7 "text-[#e3000f] font-medium hover:underline"\cf6 >\cf5 Yr\cf6 </\cf2 a\cf6 >\cf5 , levert av Meteorologisk institutt og NRK.\cb1 \
+\cb3         \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\cb3     \cf6 </\cf2 div\cf6 >\cf5 \cb1 \
+\cb3     \cf8 <!-- Selve V\'e6rriggen slutt -->\cf5 \cb1 \
+\
+\cb3     \cf6 <\cf2 script\cf6 >\cf5 \cb1 \
+\cb3         \cf8 // Initialiserer ikonene\cf5 \cb1 \
+\cb3         lucide\cf10 .\cf5 createIcons\cf10 ();\cf5 \cb1 \
+\
+\cb3         \cf8 // DIN FROST API CLIENT ID\cf5 \cb1 \
+\cb3         \cf9 const\cf5  frostClientId \cf10 =\cf5  \cf12 '39031427-29d0-4c59-a0b7-eed7467965ed'\cf10 ;\cf5 \cb1 \
+\
+\cb3         \cf8 // Fysiske m\'e5lestasjoner\cf5 \cb1 \
+\cb3         \cf9 const\cf5  stations \cf10 =\cf5  \cf10 [\cf5 \cb1 \
+\cb3             \cf10 \{\cf5  id\cf10 :\cf5  \cf12 'SN3190'\cf10 ,\cf5  name\cf10 :\cf5  \cf12 'Sarpsborg sentrum'\cf10 ,\cf5  lat\cf10 :\cf5  \cf13 59.2851\cf10 ,\cf5  lon\cf10 :\cf5  \cf13 11.1128\cf5  \cf10 \},\cf5 \cb1 \
+\cb3             \cf10 \{\cf5  id\cf10 :\cf5  \cf12 'SN3370'\cf10 ,\cf5  name\cf10 :\cf5  \cf12 'Kalnes'\cf10 ,\cf5  lat\cf10 :\cf5  \cf13 59.3193\cf10 ,\cf5  lon\cf10 :\cf5  \cf13 11.0422\cf5  \cf10 \},\cf5 \cb1 \
+\cb3             \cf10 \{\cf5  id\cf10 :\cf5  \cf12 'SN3003'\cf10 ,\cf5  name\cf10 :\cf5  \cf12 'E6 Solbergt\'e5rnet'\cf10 ,\cf5  lat\cf10 :\cf5  \cf13 59.2046\cf10 ,\cf5  lon\cf10 :\cf5  \cf13 11.1780\cf5  \cf10 \},\cf5 \cb1 \
+\cb3             \cf10 \{\cf5  id\cf10 :\cf5  \cf12 'SN3200'\cf10 ,\cf5  name\cf10 :\cf5  \cf12 'Bater\'f8d'\cf10 ,\cf5  lat\cf10 :\cf5  \cf13 59.3072\cf10 ,\cf5  lon\cf10 :\cf5  \cf13 11.1338\cf5  \cf10 \}\cf5 \cb1 \
+\cb3         \cf10 ];\cf5 \cb1 \
+\
+\cb3         \cf8 // Hjelpefunksjon for \'e5 oversette Yr-symboler til v\'e5re ikoner\cf5 \cb1 \
+\cb3         \cf9 function\cf5  getIconFromSymbol\cf10 (\cf5 symbolCode\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (!\cf5 symbolCode\cf10 )\cf5  \cf9 return\cf5  \cf12 'cloud'\cf10 ;\cf5 \cb1 \
+\cb3             \cf9 const\cf5  base \cf10 =\cf5  symbolCode\cf10 .\cf5 split\cf10 (\cf12 '_'\cf10 )[\cf13 0\cf10 ];\cf5 \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (\cf5 base\cf10 .\cf5 includes\cf10 (\cf12 'clear'\cf10 )\cf5  \cf10 ||\cf5  base\cf10 .\cf5 includes\cf10 (\cf12 'fair'\cf10 ))\cf5  \cf9 return\cf5  \cf12 'sun'\cf10 ;\cf5 \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (\cf5 base\cf10 .\cf5 includes\cf10 (\cf12 'partly'\cf10 ))\cf5  \cf9 return\cf5  \cf12 'cloud-sun'\cf10 ;\cf5 \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (\cf5 base\cf10 .\cf5 includes\cf10 (\cf12 'rain'\cf10 ))\cf5  \cf9 return\cf5  \cf12 'cloud-rain'\cf10 ;\cf5 \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (\cf5 base\cf10 .\cf5 includes\cf10 (\cf12 'heavyrain'\cf10 ))\cf5  \cf9 return\cf5  \cf12 'cloud-lightning'\cf10 ;\cf5 \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (\cf5 base\cf10 .\cf5 includes\cf10 (\cf12 'snow'\cf10 )\cf5  \cf10 ||\cf5  base\cf10 .\cf5 includes\cf10 (\cf12 'sleet'\cf10 ))\cf5  \cf9 return\cf5  \cf12 'snowflake'\cf10 ;\cf5 \cb1 \
+\cb3             \cf9 return\cf5  \cf12 'cloud'\cf10 ;\cf5 \cb1 \
+\cb3         \cf10 \}\cf5 \cb1 \
+\
+\cb3         \cf8 // Funksjon for \'e5 \'e5pne/lukke varselet (kalles n\'e5r man klikker p\'e5 raden)\cf5 \cb1 \
+\cb3         window\cf10 .\cf5 toggleForecast \cf10 =\cf5  \cf9 function\cf10 (\cf5 id\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3             \cf9 const\cf5  dropdown \cf10 =\cf5  document\cf10 .\cf5 getElementById\cf10 (\cf12 `forecast-\cf10 $\{\cf5 id\cf10 \}\cf12 `\cf10 );\cf5 \cb1 \
+\cb3             \cf9 const\cf5  chevron \cf10 =\cf5  document\cf10 .\cf5 getElementById\cf10 (\cf12 `chevron-\cf10 $\{\cf5 id\cf10 \}\cf12 `\cf10 );\cf5 \cb1 \
+\cb3             \cb1 \
+\cb3             \cf9 if\cf5  \cf10 (\cf5 dropdown\cf10 .\cf5 classList\cf10 .\cf5 contains\cf10 (\cf12 'open'\cf10 ))\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                 dropdown\cf10 .\cf5 classList\cf10 .\cf5 remove\cf10 (\cf12 'open'\cf10 );\cf5 \cb1 \
+\cb3                 chevron\cf10 .\cf5 classList\cf10 .\cf5 remove\cf10 (\cf12 'rotate-180'\cf10 );\cf5 \cb1 \
+\cb3             \cf10 \}\cf5  \cf9 else\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                 dropdown\cf10 .\cf5 classList\cf10 .\cf5 add\cf10 (\cf12 'open'\cf10 );\cf5 \cb1 \
+\cb3                 chevron\cf10 .\cf5 classList\cf10 .\cf5 add\cf10 (\cf12 'rotate-180'\cf10 );\cf5 \cb1 \
+\cb3             \cf10 \}\cf5 \cb1 \
+\cb3         \cf10 \};\cf5 \cb1 \
+\
+\cb3         \cf9 async\cf5  \cf9 function\cf5  fetchAllWeatherData\cf10 ()\cf5  \cf10 \{\cf5 \cb1 \
+\cb3             \cf9 try\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                 \cf9 const\cf5  weatherListEl \cf10 =\cf5  document\cf10 .\cf5 getElementById\cf10 (\cf12 'weather-list'\cf10 );\cf5 \cb1 \
+\cb3                 weatherListEl\cf10 .\cf5 innerHTML \cf10 =\cf5  \cf12 ''\cf10 ;\cf5  \cf8 // T\'f8mmer listen\cf5 \cb1 \
+\
+\cb3                 \cf8 // Henter data for alle stasjoner parallelt\cf5 \cb1 \
+\cb3                 \cf9 const\cf5  fetchPromises \cf10 =\cf5  stations\cf10 .\cf5 map\cf10 (\cf9 async\cf5  \cf10 (\cf5 station\cf10 )\cf5  \cf10 =>\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                     \cf9 let\cf5  temp \cf10 =\cf5  \cf12 '--'\cf10 ;\cf5 \cb1 \
+\cb3                     \cf9 let\cf5  wind \cf10 =\cf5  \cf12 '--'\cf10 ;\cf5 \cb1 \
+\cb3                     \cf9 let\cf5  precip \cf10 =\cf5  \cf12 '--'\cf10 ;\cf5 \cb1 \
+\cb3                     \cf9 let\cf5  icon \cf10 =\cf5  \cf12 'cloud'\cf10 ;\cf5 \cb1 \
+\cb3                     \cf9 let\cf5  forecastHtml \cf10 =\cf5  \cf12 ''\cf10 ;\cf5 \cb1 \
+\
+\cb3                     \cf8 // FORS\'d8K 1: Hent Locationforecast (brukes til regn og timesvarsel)\cf5 \cb1 \
+\cb3                     \cf9 try\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                         \cf9 const\cf5  fallbackUrl \cf10 =\cf5  \cf12 `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=\cf10 $\{\cf5 station\cf10 .\cf5 lat\cf10 \}\cf12 &lon=\cf10 $\{\cf5 station\cf10 .\cf5 lon\cf10 \}\cf12 `\cf10 ;\cf5 \cb1 \
+\cb3                         \cf9 const\cf5  fallbackResponse \cf10 =\cf5  \cf9 await\cf5  fetch\cf10 (\cf5 fallbackUrl\cf10 );\cf5 \cb1 \
+\cb3                         \cb1 \
+\cb3                         \cf9 if\cf5  \cf10 (\cf5 fallbackResponse\cf10 .\cf5 ok\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                             \cf9 const\cf5  fallbackData \cf10 =\cf5  \cf9 await\cf5  fallbackResponse\cf10 .\cf5 json\cf10 ();\cf5 \cb1 \
+\cb3                             \cf9 const\cf5  timeseries \cf10 =\cf5  fallbackData\cf10 .\cf5 properties\cf10 .\cf5 timeseries\cf10 ;\cf5 \cb1 \
+\cb3                             \cf9 const\cf5  currentData \cf10 =\cf5  timeseries\cf10 [\cf13 0\cf10 ].\cf5 data\cf10 ;\cf5 \cb1 \
+\cb3                             \cb1 \
+\cb3                             \cf8 // Setter basisverdier\cf5 \cb1 \
+\cb3                             \cf9 if\cf5  \cf10 (\cf5 currentData\cf10 .\cf5 instant\cf10 .\cf5 details\cf10 .\cf5 air_temperature \cf10 !==\cf5  \cf9 undefined\cf10 )\cf5  temp \cf10 =\cf5  currentData\cf10 .\cf5 instant\cf10 .\cf5 details\cf10 .\cf5 air_temperature\cf10 .\cf5 toFixed\cf10 (\cf13 1\cf10 );\cf5 \cb1 \
+\cb3                             \cf9 if\cf5  \cf10 (\cf5 currentData\cf10 .\cf5 instant\cf10 .\cf5 details\cf10 .\cf5 wind_speed \cf10 !==\cf5  \cf9 undefined\cf10 )\cf5  wind \cf10 =\cf5  currentData\cf10 .\cf5 instant\cf10 .\cf5 details\cf10 .\cf5 wind_speed\cf10 .\cf5 toFixed\cf10 (\cf13 1\cf10 );\cf5 \cb1 \
+\cb3                             \cf9 if\cf5  \cf10 (\cf5 currentData\cf10 .\cf5 next_1_hours\cf10 .\cf5 details\cf10 .\cf5 precipitation_amount \cf10 !==\cf5  \cf9 undefined\cf10 )\cf5  precip \cf10 =\cf5  currentData\cf10 .\cf5 next_1_hours\cf10 .\cf5 details\cf10 .\cf5 precipitation_amount\cf10 .\cf5 toFixed\cf10 (\cf13 1\cf10 );\cf5 \cb1 \
+\cb3                             \cb1 \
+\cb3                             icon \cf10 =\cf5  getIconFromSymbol\cf10 (\cf5 currentData\cf10 .\cf5 next_1_hours\cf10 .\cf5 summary\cf10 .\cf5 symbol_code\cf10 );\cf5 \cb1 \
+\
+\cb3                             \cf8 // Bygger fremtidsvarselet (de neste 5 timene)\cf5 \cb1 \
+\cb3                             \cf9 let\cf5  upcomingHoursHtml \cf10 =\cf5  \cf12 ''\cf10 ;\cf5 \cb1 \
+\cb3                             \cf8 // Vi starter p\'e5 index 1 (neste time) og henter 5 timer frem\cf5 \cb1 \
+\cb3                             \cf9 for\cf10 (\cf9 let\cf5  i \cf10 =\cf5  \cf13 1\cf10 ;\cf5  i \cf10 <=\cf5  \cf13 5\cf10 ;\cf5  i\cf10 ++)\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                                 \cf9 if\cf10 (\cf5 timeseries\cf10 [\cf5 i\cf10 ])\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                                     \cf9 const\cf5  tData \cf10 =\cf5  timeseries\cf10 [\cf5 i\cf10 ].\cf5 data\cf10 ;\cf5 \cb1 \
+\cb3                                     \cf9 const\cf5  timeObj \cf10 =\cf5  \cf9 new\cf5  \cf14 Date\cf10 (\cf5 timeseries\cf10 [\cf5 i\cf10 ].\cf5 time\cf10 );\cf5 \cb1 \
+\cb3                                     \cf9 const\cf5  hourStr \cf10 =\cf5  timeObj\cf10 .\cf5 toLocaleTimeString\cf10 (\cf12 'no-NO'\cf10 ,\cf5  \cf10 \{\cf5  hour\cf10 :\cf5  \cf12 '2-digit'\cf10 ,\cf5  minute\cf10 :\cf5  \cf12 '2-digit'\cf5  \cf10 \});\cf5 \cb1 \
+\cb3                                     \cf9 const\cf5  fTemp \cf10 =\cf5  tData\cf10 .\cf5 instant\cf10 .\cf5 details\cf10 .\cf5 air_temperature\cf10 .\cf5 toFixed\cf10 (\cf13 0\cf10 );\cf5 \cb1 \
+\cb3                                     \cf9 const\cf5  fSym \cf10 =\cf5  tData\cf10 .\cf5 next_1_hours \cf10 ?\cf5  tData\cf10 .\cf5 next_1_hours\cf10 .\cf5 summary\cf10 .\cf5 symbol_code \cf10 :\cf5  \cf10 (\cf5 tData\cf10 .\cf5 next_6_hours \cf10 ?\cf5  tData\cf10 .\cf5 next_6_hours\cf10 .\cf5 summary\cf10 .\cf5 symbol_code \cf10 :\cf5  \cf12 ''\cf10 );\cf5 \cb1 \
+\cb3                                     \cf9 const\cf5  fIcon \cf10 =\cf5  getIconFromSymbol\cf10 (\cf5 fSym\cf10 );\cf5 \cb1 \
+\
+\cb3                                     upcomingHoursHtml \cf10 +=\cf5  \cf12 `\cf5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf12 \cb3                                         <div class="flex flex-col items-center justify-center p-2 min-w-[60px]">\cf5 \cb1 \
+\cf12 \cb3                                             <span class="text-xs text-gray-500 mb-1.5">\cf10 $\{\cf5 hourStr\cf10 \}\cf12 </span>\cf5 \cb1 \
+\cf12 \cb3                                             <i data-lucide="\cf10 $\{\cf5 fIcon\cf10 \}\cf12 " class="w-6 h-6 text-[#e3000f] mb-1.5"></i>\cf5 \cb1 \
+\cf12 \cb3                                             <span class="text-sm font-bold text-gray-800">\cf10 $\{\cf5 fTemp\cf10 \}\cf12 \'b0</span>\cf5 \cb1 \
+\cf12 \cb3                                         </div>\cf5 \cb1 \
+\cf12 \cb3                                     `\cf10 ;\cf5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3                                 \cf10 \}\cf5 \cb1 \
+\cb3                             \cf10 \}\cf5 \cb1 \
+\cb3                             forecastHtml \cf10 =\cf5  \cf12 `<div class="flex justify-between overflow-x-auto no-scrollbar">\cf10 $\{\cf5 upcomingHoursHtml\cf10 \}\cf12 </div>`\cf10 ;\cf5 \cb1 \
+\cb3                         \cf10 \}\cf5 \cb1 \
+\cb3                     \cf10 \}\cf5  \cf9 catch\cf5  \cf10 (\cf5 fallbackError\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                         console\cf10 .\cf5 error\cf10 (\cf12 `Klarte ikke hente varsel for \cf10 $\{\cf5 station\cf10 .\cf5 name\cf10 \}\cf12 :`\cf10 ,\cf5  fallbackError\cf10 );\cf5 \cb1 \
+\cb3                         icon \cf10 =\cf5  \cf12 'alert-triangle'\cf10 ;\cf5 \cb1 \
+\cb3                         forecastHtml \cf10 =\cf5  \cf12 '<p class="text-xs text-red-500">Kunne ikke laste timevarsel.</p>'\cf10 ;\cf5 \cb1 \
+\cb3                     \cf10 \}\cf5 \cb1 \
+\
+\cb3                     \cf8 // FORS\'d8K 2: Oppgrader med fysisk m\'e5ling fra Frost API for selve hovedvisningen\cf5 \cb1 \
+\cb3                     \cf9 try\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                         \cf9 const\cf5  apiUrl \cf10 =\cf5  \cf12 `https://frost.met.no/observations/v0.jsonld?sources=\cf10 $\{\cf5 station\cf10 .\cf5 id\cf10 \}\cf12 &referencetime=latest&elements=air_temperature,wind_speed`\cf10 ;\cf5 \cb1 \
+\cb3                         \cf9 const\cf5  response \cf10 =\cf5  \cf9 await\cf5  fetch\cf10 (\cf5 apiUrl\cf10 ,\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                             headers\cf10 :\cf5  \cf10 \{\cf5  \cf12 'Authorization'\cf10 :\cf5  \cf12 'Basic '\cf5  \cf10 +\cf5  btoa\cf10 (\cf5 frostClientId \cf10 +\cf5  \cf12 ':'\cf10 )\cf5  \cf10 \}\cf5 \cb1 \
+\cb3                         \cf10 \});\cf5 \cb1 \
+\
+\cb3                         \cf9 if\cf5  \cf10 (\cf5 response\cf10 .\cf5 ok\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                             \cf9 const\cf5  result \cf10 =\cf5  \cf9 await\cf5  response\cf10 .\cf5 json\cf10 ();\cf5 \cb1 \
+\cb3                             \cf9 const\cf5  stationData \cf10 =\cf5  result\cf10 .\cf5 data \cf10 &&\cf5  result\cf10 .\cf5 data\cf10 .\cf5 length \cf10 >\cf5  \cf13 0\cf5  \cf10 ?\cf5  result\cf10 .\cf5 data\cf10 [\cf13 0\cf10 ]\cf5  \cf10 :\cf5  \cf9 null\cf10 ;\cf5 \cb1 \
+\
+\cb3                             \cf9 if\cf5  \cf10 (\cf5 stationData \cf10 &&\cf5  stationData\cf10 .\cf5 observations\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                                 \cf9 const\cf5  tempObs \cf10 =\cf5  stationData\cf10 .\cf5 observations\cf10 .\cf5 find\cf10 (\cf5 o \cf10 =>\cf5  o\cf10 .\cf5 elementId \cf10 ===\cf5  \cf12 'air_temperature'\cf10 );\cf5 \cb1 \
+\cb3                                 \cf9 const\cf5  windObs \cf10 =\cf5  stationData\cf10 .\cf5 observations\cf10 .\cf5 find\cf10 (\cf5 o \cf10 =>\cf5  o\cf10 .\cf5 elementId \cf10 ===\cf5  \cf12 'wind_speed'\cf10 );\cf5 \cb1 \
+\cb3                                 \cb1 \
+\cb3                                 \cf9 if\cf5  \cf10 (\cf5 tempObs\cf10 )\cf5  temp \cf10 =\cf5  tempObs\cf10 .\cf5 value\cf10 .\cf5 toFixed\cf10 (\cf13 1\cf10 );\cf5 \cb1 \
+\cb3                                 \cf9 if\cf5  \cf10 (\cf5 windObs\cf10 )\cf5  wind \cf10 =\cf5  windObs\cf10 .\cf5 value\cf10 .\cf5 toFixed\cf10 (\cf13 1\cf10 );\cf5 \cb1 \
+\cb3                             \cf10 \}\cf5 \cb1 \
+\cb3                         \cf10 \}\cf5 \cb1 \
+\cb3                     \cf10 \}\cf5  \cf9 catch\cf5  \cf10 (\cf5 error\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                         console\cf10 .\cf5 warn\cf10 (\cf12 `Kunne ikke hente Frost-data for \cf10 $\{\cf5 station\cf10 .\cf5 name\cf10 \}\cf12 , beholder varselet.`\cf10 );\cf5 \cb1 \
+\cb3                     \cf10 \}\cf5 \cb1 \
+\
+\cb3                     \cf9 return\cf5  \cf10 \{\cf5  \cf10 ...\cf5 station\cf10 ,\cf5  temp\cf10 ,\cf5  wind\cf10 ,\cf5  precip\cf10 ,\cf5  icon\cf10 ,\cf5  forecastHtml \cf10 \};\cf5 \cb1 \
+\cb3                 \cf10 \});\cf5 \cb1 \
+\
+\cb3                 \cf9 const\cf5  results \cf10 =\cf5  \cf9 await\cf5  \cf14 Promise\cf10 .\cf5 all\cf10 (\cf5 fetchPromises\cf10 );\cf5 \cb1 \
+\
+\cb3                 \cf8 // Bygger HTML for hele listen\cf5 \cb1 \
+\cb3                 results\cf10 .\cf5 forEach\cf10 (\cf5 res \cf10 =>\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                     \cf9 const\cf5  rowHtml \cf10 =\cf5  \cf12 `\cf5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf12 \cb3                         <div class="flex flex-col w-full bg-white group">\cf5 \cb1 \
+\cf12 \cb3                             <!-- Hovedrad (Klikkbar) -->\cf5 \cb1 \
+\cf12 \cb3                             <button onclick="toggleForecast('\cf10 $\{\cf5 res\cf10 .\cf5 id\cf10 \}\cf12 ')" class="w-full flex items-center justify-between p-4 hover:bg-gray-50 focus:bg-gray-50 transition-colors focus:outline-none cursor-pointer">\cf5 \cb1 \
+\cf12 \cb3                                 <div class="flex items-center space-x-4">\cf5 \cb1 \
+\cf12 \cb3                                     <div class="text-[#e3000f] flex-shrink-0">\cf5 \cb1 \
+\cf12 \cb3                                         <i data-lucide="\cf10 $\{\cf5 res\cf10 .\cf5 icon\cf10 \}\cf12 " class="w-8 h-8"></i>\cf5 \cb1 \
+\cf12 \cb3                                     </div>\cf5 \cb1 \
+\cf12 \cb3                                     <div class="text-left">\cf5 \cb1 \
+\cf12 \cb3                                         <h3 class="font-bold text-gray-800 text-lg group-hover:text-[#e3000f] transition-colors">\cf10 $\{\cf5 res\cf10 .\cf5 name\cf10 \}\cf12 </h3>\cf5 \cb1 \
+\cf12 \cb3                                         <div class="flex flex-col sm:flex-row text-xs text-gray-500 sm:space-x-3 mt-0.5 space-y-1 sm:space-y-0">\cf5 \cb1 \
+\cf12 \cb3                                             <span class="flex items-center"><i data-lucide="wind" class="w-3 h-3 mr-1"></i> \cf10 $\{\cf5 res\cf10 .\cf5 wind\cf10 \}\cf12  m/s</span>\cf5 \cb1 \
+\cf12 \cb3                                             <span class="flex items-center"><i data-lucide="umbrella" class="w-3 h-3 mr-1"></i> \cf10 $\{\cf5 res\cf10 .\cf5 precip\cf10 \}\cf12  mm</span>\cf5 \cb1 \
+\cf12 \cb3                                         </div>\cf5 \cb1 \
+\cf12 \cb3                                     </div>\cf5 \cb1 \
+\cf12 \cb3                                 </div>\cf5 \cb1 \
+\cf12 \cb3                                 <div class="flex items-center space-x-3">\cf5 \cb1 \
+\cf12 \cb3                                     <div class="text-2xl font-bold text-gray-800 tracking-tighter">\cf5 \cb1 \
+\cf12 \cb3                                         \cf10 $\{\cf5 res\cf10 .\cf5 temp\cf10 \}\cf12 \'b0\cf5 \cb1 \
+\cf12 \cb3                                     </div>\cf5 \cb1 \
+\cf12 \cb3                                     <div class="bg-gray-100 rounded-full p-1 group-hover:bg-gray-200 transition-colors">\cf5 \cb1 \
+\cf12 \cb3                                         <i data-lucide="chevron-down" id="chevron-\cf10 $\{\cf5 res\cf10 .\cf5 id\cf10 \}\cf12 " class="w-4 h-4 text-gray-500 transition-transform duration-300"></i>\cf5 \cb1 \
+\cf12 \cb3                                     </div>\cf5 \cb1 \
+\cf12 \cb3                                 </div>\cf5 \cb1 \
+\cf12 \cb3                             </button>\cf5 \cb1 \
+\cf12 \cb3                             \cf5 \cb1 \
+\cf12 \cb3                             <!-- Skjult dropdown med varsel -->\cf5 \cb1 \
+\cf12 \cb3                             <div id="forecast-\cf10 $\{\cf5 res\cf10 .\cf5 id\cf10 \}\cf12 " class="forecast-dropdown bg-[#f8f9fa] border-t border-gray-100">\cf5 \cb1 \
+\cf12 \cb3                                 <div class="forecast-inner">\cf5 \cb1 \
+\cf12 \cb3                                     <div class="px-4 py-3">\cf5 \cb1 \
+\cf12 \cb3                                         <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 pl-2">Varsel neste 5 timer</p>\cf5 \cb1 \
+\cf12 \cb3                                         \cf10 $\{\cf5 res\cf10 .\cf5 forecastHtml\cf10 \}\cf5 \cb1 \
+\cf12 \cb3                                     </div>\cf5 \cb1 \
+\cf12 \cb3                                 </div>\cf5 \cb1 \
+\cf12 \cb3                             </div>\cf5 \cb1 \
+\cf12 \cb3                         </div>\cf5 \cb1 \
+\cf12 \cb3                     `\cf10 ;\cf5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3                     weatherListEl\cf10 .\cf5 insertAdjacentHTML\cf10 (\cf12 'beforeend'\cf10 ,\cf5  rowHtml\cf10 );\cf5 \cb1 \
+\cb3                 \cf10 \});\cf5 \cb1 \
+\
+\cb3                 \cf8 // Oppdaterer ikoner i den nye HTMLen\cf5 \cb1 \
+\cb3                 lucide\cf10 .\cf5 createIcons\cf10 ();\cf5 \cb1 \
+\
+\cb3                 \cf8 // Skjuler laster og viser listen\cf5 \cb1 \
+\cb3                 document\cf10 .\cf5 getElementById\cf10 (\cf12 'loading-state'\cf10 ).\cf5 classList\cf10 .\cf5 add\cf10 (\cf12 'hidden'\cf10 );\cf5 \cb1 \
+\cb3                 weatherListEl\cf10 .\cf5 classList\cf10 .\cf5 remove\cf10 (\cf12 'hidden'\cf10 );\cf5 \cb1 \
+\
+\cb3                 \cf8 // Oppdaterer tidspunkt for siste henting\cf5 \cb1 \
+\cb3                 \cf9 const\cf5  n\cf15 \'e5\cf5  \cf10 =\cf5  \cf9 new\cf5  \cf14 Date\cf10 ();\cf5 \cb1 \
+\cb3                 \cf9 const\cf5  tid \cf10 =\cf5  n\cf15 \'e5\cf10 .\cf5 toLocaleTimeString\cf10 (\cf12 'no-NO'\cf10 ,\cf5  \cf10 \{\cf5  hour\cf10 :\cf5  \cf12 '2-digit'\cf10 ,\cf5  minute\cf10 :\cf5  \cf12 '2-digit'\cf5  \cf10 \});\cf5 \cb1 \
+\cb3                 document\cf10 .\cf5 getElementById\cf10 (\cf12 'time-display'\cf10 ).\cf5 innerText \cf10 =\cf5  \cf12 `Sist oppdatert kl. \cf10 $\{\cf5 tid\cf10 \}\cf12 `\cf10 ;\cf5 \cb1 \
+\
+\cb3             \cf10 \}\cf5  \cf9 catch\cf5  \cf10 (\cf5 error\cf10 )\cf5  \cf10 \{\cf5 \cb1 \
+\cb3                 console\cf10 .\cf5 error\cf10 (\cf12 "Generell feil:"\cf10 ,\cf5  error\cf10 );\cf5 \cb1 \
+\cb3                 document\cf10 .\cf5 getElementById\cf10 (\cf12 'loading-state'\cf10 ).\cf5 innerHTML \cf10 =\cf5  \cf12 `<p class="text-red-500 p-6">Det oppstod en kritisk feil. Pr\'f8v igjen senere.</p>`\cf10 ;\cf5 \cb1 \
+\cb3             \cf10 \}\cf5 \cb1 \
+\cb3         \cf10 \}\cf5 \cb1 \
+\
+\cb3         \cf8 // Start prosessen\cf5 \cb1 \
+\cb3         fetchAllWeatherData\cf10 ();\cf5 \cb1 \
+\cb3     \cf6 </\cf2 script\cf6 >\cf5 \cb1 \
+\cf6 \cb3 </\cf2 body\cf6 >\cf5 \cb1 \
+\cf6 \cb3 </\cf2 html\cf6 >\cf5 \cb1 \
+}
