@@ -45,12 +45,8 @@ meta:
         <!-- Topptekst -->
         <div class="bg-white border-b-4 border-[#e3000f] px-5 py-4">
             <div class="flex justify-between items-center">
-                <!-- Fallback SA-logo -->
-                <svg viewBox='0 0 80 40' class='h-8' aria-label="Sarpsborg Arbeiderblad logo" role="img" xmlns='http://www.w3.org/2000/svg'>
-                    <text x='0' y='32' font-family='Georgia, serif' font-weight='900' font-size='38' fill='#e3000f'>S</text>
-                    <text x='24' y='32' font-family='Georgia, serif' font-weight='900' font-size='44' fill='#e3000f'>a</text>
-                    <circle cx='62' cy='30' r='5' fill='#1e293b'/>
-                </svg>
+                <!-- Ekte SA-logo (henter filen sa.svg fra samme mappe), med SVG fallback hvis den ikke finnes -->
+                <img src="sa.svg" alt="Sarpsborg Arbeiderblad" class="h-8" onerror="this.outerHTML='<svg viewBox=\'0 0 80 40\' class=\'h-8\' aria-label=\'Sarpsborg Arbeiderblad logo\' role=\'img\' xmlns=\'http://www.w3.org/2000/svg\'><text x=\'0\' y=\'32\' font-family=\'Georgia, serif\' font-weight=\'900\' font-size=\'38\' fill=\'#e3000f\'>S</text><text x=\'24\' y=\'32\' font-family=\'Georgia, serif\' font-weight=\'900\' font-size=\'44\' fill=\'#e3000f\'>a</text><circle cx=\'62\' cy=\'30\' r=\'5\' fill=\'#1e293b\'/></svg>'">
                 
                 <div class="flex items-center text-[#e3000f]">
                     <i data-lucide="cloud-sun" class="w-5 h-5 mr-1.5" aria-hidden="true"></i>
@@ -81,8 +77,8 @@ meta:
         lucide.createIcons();
 
         // Disse byttes automatisk ut av GitHub Actions
-        const frostId = '{{FROST-ID}}';
-        const frostSecret = '{{FROST-SECRET}}';
+        const frostId = '{{FROST_ID}}';
+        const frostSecret = '{{FROST_SECRET}}';
 
         // Fysiske målestasjoner
         const stations = [
